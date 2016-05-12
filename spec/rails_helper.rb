@@ -56,3 +56,8 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 end
+
+Capybara.configure do |config|
+  config.javascript_driver = :webkit
+  config.default_max_wait_time = 10
+end

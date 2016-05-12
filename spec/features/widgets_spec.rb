@@ -7,4 +7,10 @@ RSpec.feature 'Widget management', type: :feature do
     click_button 'Save'
     expect(page).to have_content('Widget was successfully created.')
   end
+
+  scenario 'User requests widgets suggestion', js: true do
+    visit '/widgets/new'
+    click_link 'Suggest'
+    expect(page).to have_content('Screwdriver, Brush, Hammer, Knife')
+  end
 end
